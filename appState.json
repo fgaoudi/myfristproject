@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "Myfristproject.js",
         "cursor": {
-          "lineNumber": 24,
-          "column": 31
+          "lineNumber": 37,
+          "column": 3
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -73,6 +73,16 @@
             "name": "thibaut"
           }
         }
+      },
+      "s3moaye2017": {
+        "name": "s3moaye2017",
+        "type": "S3",
+        "config": {
+          "mode": 0,
+          "bucket": {
+            "name": "moaye2017"
+          }
+        }
       }
     },
     "customTemplate": {
@@ -112,7 +122,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1603469585590
+    "lastSave": 1603469734375
   },
   "VCS_STATE": {
     "provider": "GitHub",

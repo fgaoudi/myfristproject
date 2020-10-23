@@ -63,6 +63,12 @@
         "AutoDeploy": true
       }
     },
+    "s3moaye2017": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "moaye2017"
+      }
+    },
     "Myfristproject": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -120,7 +126,24 @@
               }
             }
           ]
-        }
+        },
+        "Policies": [
+          {
+            "PolicyName": "MyfristprojectPolicy",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:PutObject"
+                  ],
+                  "Resource": "arn:aws:s3:::moaye2017/*"
+                }
+              ]
+            }
+          }
+        ]
       }
     },
     "httpApigFileUploaderAPIIntegrationMyfristproject": {
