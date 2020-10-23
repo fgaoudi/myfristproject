@@ -1,7 +1,9 @@
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
 let mime = require('mime-types')
+
 exports.handler = async (event) => {
+
     console.log("Request received");
 
     // Extract file content
@@ -19,7 +21,7 @@ exports.handler = async (event) => {
     // Upload the file to S3
     try {
         let data = await s3.putObject({
-            Bucket: "kapogaoudi",
+            Bucket: "sourale",
             Key: fullFileName,
             Body: fileContent,
             Metadata: {}
@@ -27,9 +29,9 @@ exports.handler = async (event) => {
 
         console.log("Successfully uploaded file", fullFileName);
         return "Successfully uploaded";
+
     } catch (err) {
         console.log("Failed to upload file", fullFileName, err);
         throw err;
     };
-
 };
