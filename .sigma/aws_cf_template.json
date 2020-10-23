@@ -63,12 +63,6 @@
         "AutoDeploy": true
       }
     },
-    "s3thibaut": {
-      "Type": "AWS::S3::Bucket",
-      "Properties": {
-        "BucketName": "thibaut"
-      }
-    },
     "Myfristproject": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -126,24 +120,7 @@
               }
             }
           ]
-        },
-        "Policies": [
-          {
-            "PolicyName": "MyfristprojectPolicy",
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "s3:PutObject"
-                  ],
-                  "Resource": "arn:aws:s3:::thibaut/*"
-                }
-              ]
-            }
-          }
-        ]
+        }
       }
     },
     "httpApigFileUploaderAPIIntegrationMyfristproject": {
