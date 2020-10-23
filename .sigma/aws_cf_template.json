@@ -63,6 +63,12 @@
         "AutoDeploy": true
       }
     },
+    "s3thibaut": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "thibaut"
+      }
+    },
     "Myfristproject": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -132,7 +138,7 @@
                   "Action": [
                     "s3:PutObject"
                   ],
-                  "Resource": "arn:aws:s3:::sourale/*"
+                  "Resource": "arn:aws:s3:::thibaut/*"
                 }
               ]
             }
