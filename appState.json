@@ -12,7 +12,7 @@
         "filePath": "Myfristproject.js",
         "cursor": {
           "lineNumber": 28,
-          "column": 65
+          "column": 64
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -102,7 +102,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1603468402819
+    "lastSave": 1603468678454
   },
   "VCS_STATE": {
     "provider": "GitHub",
