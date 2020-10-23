@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "Myfristproject.js",
         "cursor": {
-          "lineNumber": 7,
-          "column": 28
+          "lineNumber": 28,
+          "column": 65
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -102,7 +102,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1603467967941
+    "lastSave": 1603468402819
   },
   "VCS_STATE": {
     "provider": "GitHub",
