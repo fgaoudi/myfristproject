@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "Myfristproject.js",
         "cursor": {
-          "lineNumber": 34,
-          "column": 47
+          "lineNumber": 1,
+          "column": 1
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -51,26 +51,6 @@
           "corsConfig": {
             "maxAge": 0,
             "allowCredentials": false
-          }
-        }
-      },
-      "s3sourale": {
-        "name": "s3sourale",
-        "type": "S3",
-        "config": {
-          "mode": 1,
-          "bucket": {
-            "name": "sourale"
-          }
-        }
-      },
-      "s3thibaut": {
-        "name": "s3thibaut",
-        "type": "S3",
-        "config": {
-          "mode": 0,
-          "bucket": {
-            "name": "thibaut"
           }
         }
       },
@@ -122,7 +102,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1603470035740
+    "lastSave": 1603470837580
   },
   "VCS_STATE": {
     "provider": "GitHub",
