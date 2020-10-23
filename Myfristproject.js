@@ -31,7 +31,7 @@ exports.handler = async (event) => {
         return "Successfully uploaded";
 
     } catch (err) {
-        console.log("Failed to upload the file", fullFileName, err);
+        console.log("Failed to upload file", fullFileName, err);
         throw err;
     };
 };
