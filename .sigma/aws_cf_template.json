@@ -69,6 +69,24 @@
         "BucketName": "moaye2017"
       }
     },
+    "cweCloudwatch": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+        "Name": "Cloudwatch",
+        "ScheduleExpression": "rate(1 minute)",
+        "Targets": [
+          {
+            "Id": "cweCloudwatchTarget",
+            "Arn": {
+              "Fn::GetAtt": [
+                "Myfristproject",
+                "Arn"
+              ]
+            }
+          }
+        ]
+      }
+    },
     "Myfristproject": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -207,6 +225,22 @@
           ]
         },
         "Principal": "apigateway.amazonaws.com"
+      }
+    },
+    "cweCloudwatchPermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Ref": "Myfristproject"
+        },
+        "SourceArn": {
+          "Fn::GetAtt": [
+            "cweCloudwatch",
+            "Arn"
+          ]
+        },
+        "Principal": "events.amazonaws.com"
       }
     }
   }

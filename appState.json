@@ -30,9 +30,13 @@
               "method": "PUT",
               "route": "/upload"
             }
+          },
+          {
+            "resourceName": "cweCloudwatch",
+            "config": {}
           }
         ],
-        "lastUpdated": 1603464278253
+        "lastUpdated": 1603589482616
       }
     },
     "openFiles": [
@@ -63,12 +67,23 @@
             "name": "moaye2017"
           }
         }
+      },
+      "cweCloudwatch": {
+        "name": "cweCloudwatch",
+        "type": "CLOUD_WATCH",
+        "config": {
+          "mode": 0,
+          "name": "Cloudwatch",
+          "description": "",
+          "eventBusName": "default",
+          "scheduleExpression": "rate(1 minute)"
+        }
       }
     },
     "customTemplate": {
       "syntax": "JSON",
       "overrideDefault": false,
-      "dialect": null,
+      "dialect": "CloudFormation",
       "definitions": null
     },
     "envVariables": [
@@ -102,7 +117,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1603471478828
+    "lastSave": 1603589532913
   },
   "VCS_STATE": {
     "provider": "GitHub",
